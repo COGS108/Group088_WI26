@@ -19,8 +19,7 @@ def plot_relationship(df, x, y, hue=None, title=None, log_scale=False):
     plt.show()
 
 def plot_distribution(df, column, title):
-    """Standardized distribution plot for skewed data."""
-    plt.figure(figsize=(9, 4))
+    """Distribution plot for skewed data."""
     sns.histplot(df[column], kde=True, bins=30)
     plt.axvline(df[column].median(), color="red", linestyle="--", label=f"Median: {df[column].median():.2f}")
     plt.title(title)
